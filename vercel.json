@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/leadscon-2026/:path*",
-            "destination": "https://leadscon-2026.vercel.app/leadscon-2026/:path*"
+            "destination": "/:path*"
         },
         {
             "source": "/leadscon-vip-experience/:path*",
