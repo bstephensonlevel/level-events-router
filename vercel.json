@@ -1,0 +1,13 @@
+// vercel.json
+{
+    "rewrites": [
+        {
+            "source": "/leadscon-2026/:path*",
+            "destination": "https://leadscon-2026.vercel.app/leadscon-2026/:path*"
+        },
+        {
+            "source": "/leadscon-vip-experience/:path*",
+            "destination": "https://leadscon-vip-experience.vercel.app/leadscon-vip-experience/:path*"
+        }
+    ]
+}
