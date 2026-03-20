@@ -2,11 +2,11 @@
     "rewrites": [
         {
             "source": "/leadscon-2026/:path*",
-            "destination": "/:path*"
+            "destination": "https://leadscon-2026.vercel.app/:path*"
         },
         {
             "source": "/leadscon-vip-experience/:path*",
-            "destination": "https://level-leadscon-vip-experience.vercel.app/leadscon-vip-experience/:path*"
+            "destination": "https://level-leadscon-vip-experience.vercel.app/:path*"
         }
     ]
 }
