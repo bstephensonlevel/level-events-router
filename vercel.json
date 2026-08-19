@@ -7,7 +7,7 @@
         {
             "source": "/leadscon-vip-experience/:path*",
             "destination": "https://level-leadscon-vip-experience.vercel.app/:path*"
-        }
+        },
         {
             "source": "/chicago-dinner-2026/:path*",
             "destination": "https://chicago-dinner-2026.vercel.app/:path*"
