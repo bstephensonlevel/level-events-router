@@ -12,5 +12,9 @@
             "source": "/chicago-dinner-2026/:path*",
             "destination": "https://chicago-dinner-2026.vercel.app/:path*"
         }
+        {
+            "source": "/maicon-2026/:path*",
+            "destination": "https://maicon-2026.vercel.app/:path*"
+        }
     ]
 }
