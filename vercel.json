@@ -15,6 +15,10 @@
         {
             "source": "/maicon-2026/:path*",
             "destination": "https://maicon-2026.vercel.app/:path*"
+        },
+        {
+            "source": "/dmfs-2026/:path*",
+            "destination": "https://dmfs-2026.vercel.app/:path*"
         }
     ]
 }
