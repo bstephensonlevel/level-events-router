@@ -19,6 +19,10 @@
         {
             "source": "/dmfs-2026/:path*",
             "destination": "https://dmfs-2026.vercel.app/:path*"
+        },
+        {
+            "source": "/level-tiktok-discovery-day-2026/:path*",
+            "destination": "https://level-tiktok-discovery-day-2026.vercel.app/:path*"
         }
     ]
 }
