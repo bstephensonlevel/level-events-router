@@ -1,4 +1,5 @@
 {
+    "trailingSlash": false,
     "rewrites": [
         {
             "source": "/leadscon-2026/:path*",
