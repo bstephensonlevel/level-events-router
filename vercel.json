@@ -24,6 +24,10 @@
         {
             "source": "/level-tiktok-discovery-day-2026/:path*",
             "destination": "https://level-tiktok-discovery-day-2026.vercel.app/:path*"
+        },
+        {
+            "source": "/ama-symposium-2026/:path*",
+            "destination": "https://level-ama-symposium-2026.vercel.app/:path*"
         }
     ]
 }
