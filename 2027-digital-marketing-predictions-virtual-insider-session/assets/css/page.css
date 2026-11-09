@@ -854,14 +854,14 @@ h2 {
 
 /* ============================================
    HUBSPOT FORM (live embed)
-   Matches the embedded form to the kit.
+   Raw HTML render: HubSpot mounts form.hs-form straight into #vis-form with no wrapper class, so rules are scoped to the mount.
    ============================================ */
 
-.hbspt-form fieldset { max-width: none; border: 0; margin: 0; padding: 0; }
+#vis-form fieldset { max-width: none; border: 0; margin: 0; padding: 0; }
 
-.hbspt-form .hs-form-field { margin-bottom: 16px; }
+#vis-form .hs-form-field { margin-bottom: 16px; }
 
-.hbspt-form .hs-form-field > label {
+#vis-form .hs-form-field > label {
   display: block;
   margin-bottom: 8px;
   font-family: var(--font-display);
@@ -870,7 +870,11 @@ h2 {
   color: var(--color-black);
 }
 
-.hbspt-form .hs-input {
+#vis-form .hs-form-required { color: var(--error); margin-left: 2px; }
+
+#vis-form .hs_submit { margin-top: 24px; }
+
+#vis-form .hs-input {
   width: 100% !important;
   min-height: 44px;
   padding: 8px 12px;
@@ -882,22 +886,22 @@ h2 {
   font-size: 16px;
 }
 
-.hbspt-form .hs-input:focus {
+#vis-form .hs-input:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px var(--color-accent);
 }
 
-.hbspt-form .hs-input.error { border-color: var(--error); }
+#vis-form .hs-input.error { border-color: var(--error); }
 
-.hbspt-form .hs-error-msgs { list-style: none; margin: 6px 0 0; padding: 0; }
+#vis-form .hs-error-msgs { list-style: none; margin: 6px 0 0; padding: 0; }
 
-.hbspt-form .hs-error-msg {
+#vis-form .hs-error-msg {
   font-size: 14px;
   color: var(--error);
 }
 
-.hbspt-form .hs-button {
+#vis-form .hs-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -915,16 +919,16 @@ h2 {
   transition: background-color 0.2s ease;
 }
 
-.hbspt-form .hs-button:hover {
+#vis-form .hs-button:hover {
   background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   color: var(--color-black);
 }
 
-.hbspt-form .hs-button:focus-visible { outline: 3px solid var(--color-black); outline-offset: 2px; }
+#vis-form .hs-button:focus-visible { outline: 3px solid var(--color-black); outline-offset: 2px; }
 
-.hbspt-form .legal-consent-container,
-.hbspt-form .hs-richtext {
+#vis-form .legal-consent-container,
+#vis-form .hs-richtext {
   font-size: 13px;
   line-height: 1.5;
   color: var(--text-secondary);
