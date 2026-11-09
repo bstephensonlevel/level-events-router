@@ -1,5 +1,5 @@
 /* Year-end Virtual Insider Session: page behavior.
-   Covers the header button, the mobile bar, scroll-and-focus, the thank-you state and the snowfall markup.
+   Covers the header button, the mobile bar, scroll-and-focus, the thank-you state (called by the HubSpot embed's onFormSubmitted) and the snowfall markup.
    No libraries. The snowflake drift runs in CSS. */
 (function () {
   'use strict';
@@ -8,7 +8,6 @@
   var card = document.getElementById('register');
   var formHost = document.getElementById('vis-form');
   var thanks = document.getElementById('vis-thanks');
-  var mock = document.getElementById('mock-form');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   /* Header button and mobile bar: show while the form card is out of view. */
@@ -36,10 +35,8 @@
     var top = card.getBoundingClientRect().top + window.pageYOffset - margin;
     window.scrollTo({ top: top, behavior: behavior });
     var field = firstField();
-    var target = field || thanks;
-    if (target) {
-      try { target.focus({ preventScroll: true }); } catch (e) { target.focus(); }
-    }
+    var target = field || (thanks && !thanks.hidden ? thanks : card);
+    try { target.focus({ preventScroll: true }); } catch (e) { target.focus(); }
     if (history.replaceState) { history.replaceState(null, '', '#register'); }
   }
 
@@ -101,11 +98,4 @@
   }
   window.visShowThanks = showThanks;
 
-  /* The prototype's mock button triggers the thank-you state so it can be reviewed. */
-  if (mock) {
-    mock.addEventListener('submit', function (event) {
-      event.preventDefault();
-      showThanks();
-    });
-  }
 })();
